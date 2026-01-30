@@ -62,7 +62,7 @@ godssight/
 - No external dependencies required (standard library only)
 
 ### Clone the repository
-git clone https://github.com/yourusername/gods-sight.git  
+git clone https://github.com/yokai-crow/gods_sight.git  
 cd gods-sight
 
 ---
@@ -70,33 +70,54 @@ cd gods-sight
 ## 🧪 Usage
 
 ### Basic scan
+
+```bash
 python main.py -H example.com
+```
 
 ### Scan common ports only
+
+```bash
 python main.py -H example.com -C
+```
 
 ### Increase threads
+
+```bash
 python main.py -H example.com --threads 50
+```
 
 ### Enable verbose logging
+
+```bash
 python main.py -H example.com --verbose
+```
 
 ### Strict mode (MEDIUM & HIGH findings only)
+
+```bash
 python main.py -H example.com --strict
+```
 
 ---
 
 ## 📤 Exporting Results
 
 ### Export to JSON
-python main.py -H example.com --json
 
+```bash
+python main.py -H example.com --json
+```
 ### Export to SARIF (GitHub / CI compatible)
+
+```bash
 python main.py -H example.com --sarif
+```
 
 ### Output files
-example.com_findings.json  
-example.com_findings.sarif
+
+>example.com_findings.json  
+>example.com_findings.sarif
 
 ---
 
@@ -121,6 +142,9 @@ class WeakServicePlugin(Plugin):
 
 Plugin | Description  
 ------ | ------------
+http_headers | http related checks
+ssh_reachable | ssh related checks
+sql_injection | simple test (ud)
 WeakServicePlugin | Detects FTP & Telnet  
 TLSCertPlugin | Checks TLS certificate expiration  
 
