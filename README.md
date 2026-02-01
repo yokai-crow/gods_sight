@@ -1,10 +1,8 @@
 # God's Sight by Arun Saru 🔍 
-# i'll update readme later 
+
 **Open Source Security Assessment Tool**
 
-God's Sight is a modular, extensible security assessment tool designed to perform  
-**network reconnaissance, service analysis, and security misconfiguration detection**  
-using a **plugin-based architecture**.
+God's Sight is a modular, extensible security assessment tool designed to perform **network reconnaissance, service analysis, and security misconfiguration detection** using a **plugin-based architecture**.
 
 It is built for:
 - Security learners
@@ -12,7 +10,8 @@ It is built for:
 - Blue team engineers
 - Open-source contributors
 
-> ⚠️ This tool is intended **ONLY for authorized security testing**.  
+> ⚠️ This tool is intended **ONLY for authorized security testing**.
+>> **This tool is currently on a Continous Development.**  
 > Unauthorized scanning of systems you do not own or have permission to test is illegal.
 
 ---
@@ -65,8 +64,10 @@ gods_sight
 - No external dependencies required (standard library only)
 
 ### Clone the repository
+```bash
 git clone https://github.com/yokai-crow/gods_sight.git  
 cd gods-sight
+```
 
 ---
 
@@ -134,13 +135,13 @@ Each plugin:
 - Returns structured findings  
 
 ### Example Plugin
-
+```bash
 class WeakServicePlugin(Plugin):
     name = "Weak / Legacy Services"
 
     def run(self, results):
         ...
-
+```
 ### Current Plugins
 
 Plugin | Description  
@@ -178,6 +179,7 @@ This makes the output SOC-ready and easy to integrate with other tools.
 
 Example:
 
+```bash
 from plugins.base import Plugin
 
 class MyPlugin(Plugin):
@@ -185,7 +187,7 @@ class MyPlugin(Plugin):
 
     def run(self, results):
         return []
-
+```
 Plugins are auto-loaded at runtime.
 
 ---
