@@ -32,28 +32,31 @@ It is built for:
 
 ## 📂 Project Structure
 
-godssight/
-│
+<pre>
+gods_sight
 ├── core/
-│   ├── scanner.py        # Port scanning engine
-│   ├── plugin_loader.py  # Dynamic plugin loader
-│   ├── results.py        # ScanResult data model
-│   ├── findings.py       # Finding data model
-│   ├── utils.py          # Filtering & output helpers
-│   ├── output_json.py    # JSON exporter
-│   └── output_sarif.py   # SARIF exporter
+│   ├── config.py
+│   ├── findings.py
+│   ├── output_json.py
+│   ├── plugin_loader.py
+│   ├── results.py
+│   ├── scanner.py
+│   ├── target.py
+│   └── utils.py
 │
 ├── plugins/
 │   ├── base.py           # Plugin base class
-│   ├── weak_services.py  # FTP / Telnet detection
-│   ├── tls_cert.py       # TLS certificate inspection
-│   └── __init__.py
+│   ├── http_headers.py
+│   ├── sql_injection.py
+│   ├── weak_services.py
+│   ├── tls_cert.py       
+│   └── ssh_reachable.py
 │
 ├── main.py               # CLI entry point
 ├── LICENSE
 └── README.md
+</pre>
 
----
 
 ## 🚀 Installation
 
